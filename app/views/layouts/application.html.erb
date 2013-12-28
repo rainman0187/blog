@@ -8,7 +8,55 @@
 </head>
 <body>
 
+
+
+<div id="wrap_all">
+ <div id="header_wrap">
+    <div id="nav_wrap">
+      <ul id="nav-elements">
+        
+        <li><a href="/" border="0"><img src="<%=image_path('logo.png')%>" border="0"></a></li>
+        
+        <div style='padding-top: 60px;'> </div>
+        <li><a href="/">HOME &nbsp;</a></li> 
+        <li><a href="<%=url_for :controller => '/welcome', :action=>'aboutus' %>">ABOUT US &nbsp;</a></li> 
+        <li><a href="<%=url_for :controller => '/welcome', :action=>'games' %>">GAMES &nbsp;</a></li> 
+        <li><a href="<%=url_for :controller => '/welcome', :action=>'contact' %>">CONTACT</a></li>
+ 
+      </ul>  
+        <a href='http://www.facebook.com/pages/Rexone-Studios/194123157373087'><img style="width:35px; padding-left: 290px;" src="<%=image_path('facebook-icon.png')%>" border="0"></a>
+        <a href='http://twitter.com/Rexonestudios'><img style="width:35px; padding-left: 5px;" src="<%=image_path('twitter-icon.png')%>" border="0"></a
+        
+      <br style="clear:both">
+    </div>
+  </div>  
+  
+
+
+
 <%= yield %>
+
+
+
+
+<div class="marketing"> <b>&copy 2013 Rexone Studios. All Rights Resevered</b></div>
+<br style="clear:both">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30913756-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
 
 </body>
 </html>

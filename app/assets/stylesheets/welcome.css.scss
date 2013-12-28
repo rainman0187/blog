@@ -1,3 +1,142 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background:  #ebf5f7;
+  font-family: "Varela Round","helvetica neue",arial,helvetica,freesans,"liberation sans","numbus sans l",sans-serif;
+  line-height: 2em;
+  color: #333;
+  margin-top: 0.1em;
+  margin-right: 0.1em;
+  margin-bottom: 0.1em;
+  margin-left: 0.1em;
+  margin:auto;
+}
+
+h2 {
+  color: #777; letter-spacing:-.08em;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15em;
+  color: #333;
+        line-height:1em;
+  margin:0px;
+}
+h4 {
+  color: #000000
+}
+table {
+  color: #FFFFFF
+}
+td, th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 2em;
+  color: #333333;
+}
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em
+}
+#footer_content ul {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  list-style-type: square;
+  list-style-position: outside;
+  float:left;
+  margin-right:40px;
+  
+}
+#footer_content li{color:#ffa200;}
+#nav-elements {
+  padding:0px 20px;
+  margin:0px;
+}
+#nav-elements li {
+  float:left;
+  min-width:30px;
+  list-style-image:none;
+  list-style-type:none;
+  display:block;
+  margin-right:8px;
+  padding:10px 0px;
+  font-size:.9em;
+
+}
+
+#nav-elements li a {
+    color: white; 
+    font-size: 17px; 
+    height: 100px;
+    text-decoration: none; 
+}
+
+
+#content_wrap ul {
+  float:left;
+}
+#wrap_all {
+  margin:auto;
+  width:100%;
+ 
+}
+#content_wrap {
+  margin:auto;
+  width:850px;
+}
+#header_wrap {
+  width:100%;
+  color:#333;
+  background-color: #CA0002;
+  -moz-box-shadow: 0px 6px 7px #000000;
+        -webkit-box-shadow: 0px 6px 7px #000000;
+        box-shadow: 0px 6px 7px #000000;
+        margin:0px 0px 20px 0px;
+}
+#nav_wrap {
+  padding:0px;
+        padding-left: 15px;
+  width:960px;
+  margin:auto;
+}
+#footer_wrap {
+  padding:0px;
+  width:100%;
+  margin:auto;
+  background:#000;
+  color:#333;
+  min-height:280px;
+}
+#footer_content {
+  padding:3px;
+  width:960px;
+  margin:auto;
+}
+#footer_content a {
+  color:#ffa200;
+}
+#footer_content a:hover {
+  color:#fff;
+}
+#box_wrap {
+  color:#333 !important;
+  min-height:270px;
+  margin: auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width:840px;
+        font-size: 12px;
+}
+#credible {
+  background:#222;
+  text-align:center;
+  padding:10px;
+}
+
+.marketing{
+    color:gray; font-size:9px; text-align:center;
+}
+
+
+input{border:0px;}
+
+.lbox{padding: 2px;}
