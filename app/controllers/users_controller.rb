@@ -1,10 +1,15 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+
+  caches_page :index, :show
+
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    #@users=User.find(:all, :limit=>5) 
+    
   end
 
   # GET /users/1
@@ -25,6 +30,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    expire_page :action=> :index
 
     respond_to do |format|
       if @user.save
@@ -40,6 +46,12 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    
+    @user =  User.find(params[:id])
+    expire_page :action=> :index
+    expire_page :action=>:show, :id=>@user
+
+    
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
