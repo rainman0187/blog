@@ -1,4 +1,8 @@
 Blog::Application.routes.draw do
+  get "static_pages/home"
+  get "static_pages/aboutus"
+  get "static_pages/games"
+  get "static_pages/contact"
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
