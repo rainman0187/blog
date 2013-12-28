@@ -1,4 +1,9 @@
 class WelcomeController < ApplicationController
+  
+  caches_page :index, :aboutus, :games, :contact
+
+  
+  
   def index
   end
 
