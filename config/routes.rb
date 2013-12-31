@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  resources :cars
+
   get "welcome/index"
   get "welcome/aboutus"
   get "welcome/games"
