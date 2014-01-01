@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-
-
-  caches_page :index, :show
-
+ 
+ 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    
+    puts "--------------------------------------#{User.all.first}"
+    
+    
     #@users=User.find(:all, :limit=>5) 
     
   end
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -24,14 +26,15 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+     @user =  User.find(params[:id])
+     puts"-----------------------------------------------s"
   end
 
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
-    expire_page :action=> :index
-
+    
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -48,9 +51,8 @@ class UsersController < ApplicationController
   def update
     
     @user =  User.find(params[:id])
-    expire_page :action=> :index
-    expire_page :action=>:show, :id=>@user
-
+    
+    puts "-sdfasdfasdfasdfasdfasdfasdfasdf"
     
     respond_to do |format|
       if @user.update(user_params)
@@ -81,6 +83,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email)
+      params.require(:user).permit(:first_name, :last_name, :email, :cars)
     end
 end
